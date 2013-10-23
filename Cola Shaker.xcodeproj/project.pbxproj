@@ -19,6 +19,9 @@
 		5D07FE9918184DF400CE924D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D07FE8118184DF400CE924D /* UIKit.framework */; };
 		5D07FEA118184DF400CE924D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D07FE9F18184DF400CE924D /* InfoPlist.strings */; };
 		5D07FEA318184DF400CE924D /* Cola_ShakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEA218184DF400CE924D /* Cola_ShakerTests.m */; };
+		5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */; };
+		5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */; };
+		5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB318184E9200CE924D /* CLSShakerScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		5D07FE9E18184DF400CE924D /* Cola ShakerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cola ShakerTests-Info.plist"; sourceTree = "<group>"; };
 		5D07FEA018184DF400CE924D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D07FEA218184DF400CE924D /* Cola_ShakerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cola_ShakerTests.m; sourceTree = "<group>"; };
+		5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSGameViewController.h; sourceTree = "<group>"; };
+		5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSGameViewController.m; sourceTree = "<group>"; };
+		5D07FEB218184E9200CE924D /* CLSShakerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSShakerScene.h; sourceTree = "<group>"; };
+		5D07FEB318184E9200CE924D /* CLSShakerScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSShakerScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 			children = (
 				5D07FE8C18184DF400CE924D /* CLSAppDelegate.h */,
 				5D07FE8D18184DF400CE924D /* CLSAppDelegate.m */,
+				5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */,
+				5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */,
+				5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */,
+				5D07FEB118184E7000CE924D /* Game Scenes */,
 				5D07FE8F18184DF400CE924D /* Images.xcassets */,
 				5D07FE8418184DF400CE924D /* Supporting Files */,
 			);
@@ -142,6 +154,15 @@
 				5D07FE9F18184DF400CE924D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D07FEB118184E7000CE924D /* Game Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5D07FEB218184E9200CE924D /* CLSShakerScene.h */,
+				5D07FEB318184E9200CE924D /* CLSShakerScene.m */,
+			);
+			name = "Game Scenes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */,
 				5D07FE8818184DF400CE924D /* InfoPlist.strings in Resources */,
 				5D07FE9018184DF400CE924D /* Images.xcassets in Resources */,
 			);
@@ -241,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D07FE8A18184DF400CE924D /* main.m in Sources */,
+				5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */,
+				5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */,
 				5D07FE8E18184DF400CE924D /* CLSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
