@@ -27,19 +27,21 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    CLSShakerScene * scene = [CLSShakerScene sceneWithSize:self.sceneView.bounds.size];
-    [self.sceneView presentScene:scene];
-
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+
+    if (self.sceneView.scene == nil) {
+        CLSShakerScene * scene = [CLSShakerScene sceneWithSize:self.sceneView.bounds.size];
+        [self.sceneView presentScene:scene];
+    }
 }
 
 @end
