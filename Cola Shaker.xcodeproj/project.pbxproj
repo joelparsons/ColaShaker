@@ -22,6 +22,8 @@
 		5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */; };
 		5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */; };
 		5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB318184E9200CE924D /* CLSShakerScene.m */; };
+		5D07FEB71818782E00CE924D /* CLSCan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB61818782E00CE924D /* CLSCan.m */; };
+		5D07FEBA18192B9700CE924D /* coke.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D07FEB918192B9700CE924D /* coke.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSGameViewController.m; sourceTree = "<group>"; };
 		5D07FEB218184E9200CE924D /* CLSShakerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSShakerScene.h; sourceTree = "<group>"; };
 		5D07FEB318184E9200CE924D /* CLSShakerScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSShakerScene.m; sourceTree = "<group>"; };
+		5D07FEB51818782E00CE924D /* CLSCan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSCan.h; sourceTree = "<group>"; };
+		5D07FEB61818782E00CE924D /* CLSCan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSCan.m; sourceTree = "<group>"; };
+		5D07FEB918192B9700CE924D /* coke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coke.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +126,9 @@
 				5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */,
 				5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */,
 				5D07FEB118184E7000CE924D /* Game Scenes */,
+				5D07FEB81818783200CE924D /* Sprites */,
 				5D07FE8F18184DF400CE924D /* Images.xcassets */,
+				5D07FEB918192B9700CE924D /* coke.png */,
 				5D07FE8418184DF400CE924D /* Supporting Files */,
 			);
 			path = "Cola Shaker";
@@ -163,6 +170,15 @@
 				5D07FEB318184E9200CE924D /* CLSShakerScene.m */,
 			);
 			name = "Game Scenes";
+			sourceTree = "<group>";
+		};
+		5D07FEB81818783200CE924D /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				5D07FEB51818782E00CE924D /* CLSCan.h */,
+				5D07FEB61818782E00CE924D /* CLSCan.m */,
+			);
+			name = Sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */,
+				5D07FEBA18192B9700CE924D /* coke.png in Resources */,
 				5D07FE8818184DF400CE924D /* InfoPlist.strings in Resources */,
 				5D07FE9018184DF400CE924D /* Images.xcassets in Resources */,
 			);
@@ -265,6 +282,7 @@
 				5D07FE8A18184DF400CE924D /* main.m in Sources */,
 				5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */,
 				5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */,
+				5D07FEB71818782E00CE924D /* CLSCan.m in Sources */,
 				5D07FE8E18184DF400CE924D /* CLSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
