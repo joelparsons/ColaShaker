@@ -10,8 +10,9 @@
 
 @implementation CLSKickCanSprite
 -(id)init{
-    self = [super initWithImageNamed:@"20cola"];
+    self = [super initWithImageNamed:@"dent0"];
     if (self) {
+        [self setScale:0.2];
         [self setupShape];
     }
     return self;
@@ -36,6 +37,9 @@
     CGPathCloseSubpath(path);
     
     self.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:path];
+    self.physicsBody.allowsRotation = YES;
+    self.physicsBody.restitution = 0.03;
     
 }
+
 @end
