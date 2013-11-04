@@ -9,7 +9,7 @@
 @import SpriteKit;
 #import "CLSGameViewController.h"
 #import "CLSShakerScene.h"
-
+#import "CLSKickScene.h"
 
 @interface CLSGameViewController ()
 
@@ -39,6 +39,7 @@
     [super viewWillLayoutSubviews];
 
     if (self.sceneView.scene == nil) {
+//      CLSKickScene * scene = [CLSKickScene sceneWithSize:self.sceneView.bounds.size];
         CLSShakerScene * scene = [CLSShakerScene sceneWithSize:self.sceneView.bounds.size];
         [self.sceneView presentScene:scene];
     }
