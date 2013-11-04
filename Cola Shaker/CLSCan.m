@@ -8,12 +8,20 @@
 
 #import "CLSCan.h"
 
-@implementation CLSCan
+@implementation CLSCan{
+    SKTextureAtlas * _atlas;
+    NSArray * _sortedNames;
+    NSUInteger _dentIndex;
+}
 
 -(id)init{
-    self = [super initWithImageNamed:@"coke"];
+    _atlas = [SKTextureAtlas atlasNamed:@"cola"];
+    _sortedNames = [_atlas.textureNames sortedArrayUsingSelector:@selector(description)];
+    SKTexture * texture = [_atlas textureNamed:_sortedNames.firstObject];
+    self = [super initWithTexture:texture];
     if (self) {
         [self setupShape];
+        _dentIndex = 1;
     }
     return self;
 }
@@ -45,7 +53,18 @@
     self.physicsBody.linearDamping = 0;
     self.physicsBody.friction = 0.5;
     self.physicsBody.restitution = 0.3;
+}
 
+-(BOOL)dent{
+
+    if (_dentIndex >= _sortedNames.count) {
+        return;
+    }
+
+    NSString * textureName = _sortedNames[_dentIndex];
+    SKTexture * texture = [_atlas textureNamed:textureName];
+    self.texture = texture;
+    _dentIndex ++;
 }
 
 @end

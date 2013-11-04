@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface CLSCan : SKSpriteNode
-
+-(BOOL)dent;
 @end
