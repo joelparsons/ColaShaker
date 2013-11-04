@@ -23,7 +23,11 @@
 		5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */; };
 		5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB318184E9200CE924D /* CLSShakerScene.m */; };
 		5D07FEB71818782E00CE924D /* CLSCan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB61818782E00CE924D /* CLSCan.m */; };
-		5D07FEBA18192B9700CE924D /* coke.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D07FEB918192B9700CE924D /* coke.png */; };
+		5D4EBB5D182790ED00204561 /* cola.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EBB5C182790ED00204561 /* cola.atlas */; };
+		5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70EB2E182014DF00482B00 /* CLSKickScene.m */; };
+		5DB702EE1821BCB800964CC5 /* CLSKickCanSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */; };
+		5DB702F01821BD0F00964CC5 /* 20cola.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB702EF1821BD0F00964CC5 /* 20cola.png */; };
+		5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DD72D8318268E330048D928 /* SKTUtils.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +64,14 @@
 		5D07FEB318184E9200CE924D /* CLSShakerScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSShakerScene.m; sourceTree = "<group>"; };
 		5D07FEB51818782E00CE924D /* CLSCan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSCan.h; sourceTree = "<group>"; };
 		5D07FEB61818782E00CE924D /* CLSCan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSCan.m; sourceTree = "<group>"; };
-		5D07FEB918192B9700CE924D /* coke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coke.png; sourceTree = "<group>"; };
+		5D4EBB5C182790ED00204561 /* cola.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cola.atlas; sourceTree = "<group>"; };
+		5D70EB2D182014DF00482B00 /* CLSKickScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickScene.h; sourceTree = "<group>"; };
+		5D70EB2E182014DF00482B00 /* CLSKickScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickScene.m; sourceTree = "<group>"; };
+		5DB702EC1821BCB800964CC5 /* CLSKickCanSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickCanSprite.h; sourceTree = "<group>"; };
+		5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickCanSprite.m; sourceTree = "<group>"; };
+		5DB702EF1821BD0F00964CC5 /* 20cola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20cola.png; sourceTree = "<group>"; };
+		5DD72D8218268E330048D928 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		5DD72D8318268E330048D928 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +139,8 @@
 				5D07FEB118184E7000CE924D /* Game Scenes */,
 				5D07FEB81818783200CE924D /* Sprites */,
 				5D07FE8F18184DF400CE924D /* Images.xcassets */,
-				5D07FEB918192B9700CE924D /* coke.png */,
+				5D4EBB5C182790ED00204561 /* cola.atlas */,
+				5DB702EF1821BD0F00964CC5 /* 20cola.png */,
 				5D07FE8418184DF400CE924D /* Supporting Files */,
 			);
 			path = "Cola Shaker";
@@ -137,6 +149,8 @@
 		5D07FE8418184DF400CE924D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DD72D8218268E330048D928 /* SKTUtils.h */,
+				5DD72D8318268E330048D928 /* SKTUtils.mm */,
 				5D07FE8518184DF400CE924D /* Cola Shaker-Info.plist */,
 				5D07FE8618184DF400CE924D /* InfoPlist.strings */,
 				5D07FE8918184DF400CE924D /* main.m */,
@@ -168,6 +182,8 @@
 			children = (
 				5D07FEB218184E9200CE924D /* CLSShakerScene.h */,
 				5D07FEB318184E9200CE924D /* CLSShakerScene.m */,
+				5D70EB2D182014DF00482B00 /* CLSKickScene.h */,
+				5D70EB2E182014DF00482B00 /* CLSKickScene.m */,
 			);
 			name = "Game Scenes";
 			sourceTree = "<group>";
@@ -177,6 +193,8 @@
 			children = (
 				5D07FEB51818782E00CE924D /* CLSCan.h */,
 				5D07FEB61818782E00CE924D /* CLSCan.m */,
+				5DB702EC1821BCB800964CC5 /* CLSKickCanSprite.h */,
+				5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -258,9 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */,
-				5D07FEBA18192B9700CE924D /* coke.png in Resources */,
+				5D4EBB5D182790ED00204561 /* cola.atlas in Resources */,
 				5D07FE8818184DF400CE924D /* InfoPlist.strings in Resources */,
 				5D07FE9018184DF400CE924D /* Images.xcassets in Resources */,
+				5DB702F01821BD0F00964CC5 /* 20cola.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +300,11 @@
 			files = (
 				5D07FE8A18184DF400CE924D /* main.m in Sources */,
 				5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */,
+				5DB702EE1821BCB800964CC5 /* CLSKickCanSprite.m in Sources */,
 				5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */,
+				5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */,
 				5D07FEB71818782E00CE924D /* CLSCan.m in Sources */,
+				5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */,
 				5D07FE8E18184DF400CE924D /* CLSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +428,7 @@
 				GCC_PREFIX_HEADER = "Cola Shaker/Cola Shaker-Prefix.pch";
 				INFOPLIST_FILE = "Cola Shaker/Cola Shaker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -419,6 +442,7 @@
 				GCC_PREFIX_HEADER = "Cola Shaker/Cola Shaker-Prefix.pch";
 				INFOPLIST_FILE = "Cola Shaker/Cola Shaker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -484,6 +508,7 @@
 				5D07FEA818184DF400CE924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D07FEA918184DF400CE924D /* Build configuration list for PBXNativeTarget "Cola ShakerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +517,7 @@
 				5D07FEAB18184DF400CE924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
