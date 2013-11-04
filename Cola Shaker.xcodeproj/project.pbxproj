@@ -23,10 +23,22 @@
 		5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */; };
 		5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB318184E9200CE924D /* CLSShakerScene.m */; };
 		5D07FEB71818782E00CE924D /* CLSCan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB61818782E00CE924D /* CLSCan.m */; };
+		5D1DE30C1827E9730086E6A1 /* CLSKickCameraNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE30B1827E9730086E6A1 /* CLSKickCameraNode.m */; };
+		5D1DE312182800880086E6A1 /* city.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE311182800880086E6A1 /* city.atlas */; };
+		5D1DE315182814DD0086E6A1 /* CLSColaFoam.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE313182814DD0086E6A1 /* CLSColaFoam.sks */; };
+		5D1DE316182814DD0086E6A1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE314182814DD0086E6A1 /* spark.png */; };
+		5D1DE31A182862F40086E6A1 /* CLSMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE319182862F40086E6A1 /* CLSMenuScene.m */; };
+		5D1DE31D182863080086E6A1 /* CLSMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE31C182863080086E6A1 /* CLSMenuViewController.m */; };
+		5D1DE327182866AB0086E6A1 /* ACKNOWLEDGEMENTS in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE320182866AB0086E6A1 /* ACKNOWLEDGEMENTS */; };
+		5D1DE328182866AB0086E6A1 /* CHANGES in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE321182866AB0086E6A1 /* CHANGES */; };
+		5D1DE329182866AB0086E6A1 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE322182866AB0086E6A1 /* README */; };
+		5D1DE32A182866AB0086E6A1 /* SmallBet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE323182866AB0086E6A1 /* SmallBet.bundle */; };
+		5D1DE32B182866AB0086E6A1 /* SmallBet.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE324182866AB0086E6A1 /* SmallBet.xcconfig */; };
+		5D1DE32C182866AB0086E6A1 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE325182866AB0086E6A1 /* VERSION */; };
+		5D1DE32D182866AB0086E6A1 /* SmallBet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1DE326182866AB0086E6A1 /* SmallBet.framework */; };
 		5D4EBB5D182790ED00204561 /* cola.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EBB5C182790ED00204561 /* cola.atlas */; };
 		5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70EB2E182014DF00482B00 /* CLSKickScene.m */; };
 		5DB702EE1821BCB800964CC5 /* CLSKickCanSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */; };
-		5DB702F01821BD0F00964CC5 /* 20cola.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB702EF1821BD0F00964CC5 /* 20cola.png */; };
 		5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DD72D8318268E330048D928 /* SKTUtils.mm */; };
 /* End PBXBuildFile section */
 
@@ -64,12 +76,27 @@
 		5D07FEB318184E9200CE924D /* CLSShakerScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSShakerScene.m; sourceTree = "<group>"; };
 		5D07FEB51818782E00CE924D /* CLSCan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSCan.h; sourceTree = "<group>"; };
 		5D07FEB61818782E00CE924D /* CLSCan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSCan.m; sourceTree = "<group>"; };
+		5D1DE30A1827E9730086E6A1 /* CLSKickCameraNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickCameraNode.h; sourceTree = "<group>"; };
+		5D1DE30B1827E9730086E6A1 /* CLSKickCameraNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickCameraNode.m; sourceTree = "<group>"; };
+		5D1DE311182800880086E6A1 /* city.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = city.atlas; sourceTree = "<group>"; };
+		5D1DE313182814DD0086E6A1 /* CLSColaFoam.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CLSColaFoam.sks; sourceTree = "<group>"; };
+		5D1DE314182814DD0086E6A1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		5D1DE318182862F40086E6A1 /* CLSMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSMenuScene.h; sourceTree = "<group>"; };
+		5D1DE319182862F40086E6A1 /* CLSMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSMenuScene.m; sourceTree = "<group>"; };
+		5D1DE31B182863080086E6A1 /* CLSMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSMenuViewController.h; sourceTree = "<group>"; };
+		5D1DE31C182863080086E6A1 /* CLSMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSMenuViewController.m; sourceTree = "<group>"; };
+		5D1DE320182866AB0086E6A1 /* ACKNOWLEDGEMENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS; sourceTree = "<group>"; };
+		5D1DE321182866AB0086E6A1 /* CHANGES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
+		5D1DE322182866AB0086E6A1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		5D1DE323182866AB0086E6A1 /* SmallBet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SmallBet.bundle; sourceTree = "<group>"; };
+		5D1DE324182866AB0086E6A1 /* SmallBet.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SmallBet.xcconfig; sourceTree = "<group>"; };
+		5D1DE325182866AB0086E6A1 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		5D1DE326182866AB0086E6A1 /* SmallBet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmallBet.framework; sourceTree = "<group>"; };
 		5D4EBB5C182790ED00204561 /* cola.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cola.atlas; sourceTree = "<group>"; };
 		5D70EB2D182014DF00482B00 /* CLSKickScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickScene.h; sourceTree = "<group>"; };
 		5D70EB2E182014DF00482B00 /* CLSKickScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickScene.m; sourceTree = "<group>"; };
 		5DB702EC1821BCB800964CC5 /* CLSKickCanSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickCanSprite.h; sourceTree = "<group>"; };
 		5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickCanSprite.m; sourceTree = "<group>"; };
-		5DB702EF1821BD0F00964CC5 /* 20cola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20cola.png; sourceTree = "<group>"; };
 		5DD72D8218268E330048D928 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
 		5DD72D8318268E330048D928 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +108,7 @@
 			files = (
 				5D07FE8018184DF400CE924D /* CoreGraphics.framework in Frameworks */,
 				5D07FE8218184DF400CE924D /* UIKit.framework in Frameworks */,
+				5D1DE32D182866AB0086E6A1 /* SmallBet.framework in Frameworks */,
 				5D07FE7E18184DF400CE924D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +148,7 @@
 		5D07FE7C18184DF400CE924D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D1DE31E182866AB0086E6A1 /* SmallBet.embeddedframework */,
 				5D07FE7D18184DF400CE924D /* Foundation.framework */,
 				5D07FE7F18184DF400CE924D /* CoreGraphics.framework */,
 				5D07FE8118184DF400CE924D /* UIKit.framework */,
@@ -134,13 +163,13 @@
 				5D07FE8C18184DF400CE924D /* CLSAppDelegate.h */,
 				5D07FE8D18184DF400CE924D /* CLSAppDelegate.m */,
 				5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */,
+				5D1DE31B182863080086E6A1 /* CLSMenuViewController.h */,
+				5D1DE31C182863080086E6A1 /* CLSMenuViewController.m */,
 				5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */,
 				5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */,
-				5D07FEB118184E7000CE924D /* Game Scenes */,
-				5D07FEB81818783200CE924D /* Sprites */,
-				5D07FE8F18184DF400CE924D /* Images.xcassets */,
-				5D4EBB5C182790ED00204561 /* cola.atlas */,
-				5DB702EF1821BD0F00964CC5 /* 20cola.png */,
+				5D1DE317182862D50086E6A1 /* Menu Scene */,
+				5D1DE3061827E6B00086E6A1 /* Shaking Scene */,
+				5D07FEB118184E7000CE924D /* Kicking Scene */,
 				5D07FE8418184DF400CE924D /* Supporting Files */,
 			);
 			path = "Cola Shaker";
@@ -149,8 +178,8 @@
 		5D07FE8418184DF400CE924D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5DD72D8218268E330048D928 /* SKTUtils.h */,
-				5DD72D8318268E330048D928 /* SKTUtils.mm */,
+				5DA405CE182795E300F337C8 /* Images */,
+				5DA405CF1827960300F337C8 /* Vector Math Utilities */,
 				5D07FE8518184DF400CE924D /* Cola Shaker-Info.plist */,
 				5D07FE8618184DF400CE924D /* InfoPlist.strings */,
 				5D07FE8918184DF400CE924D /* main.m */,
@@ -177,26 +206,112 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5D07FEB118184E7000CE924D /* Game Scenes */ = {
+		5D07FEB118184E7000CE924D /* Kicking Scene */ = {
 			isa = PBXGroup;
 			children = (
-				5D07FEB218184E9200CE924D /* CLSShakerScene.h */,
-				5D07FEB318184E9200CE924D /* CLSShakerScene.m */,
 				5D70EB2D182014DF00482B00 /* CLSKickScene.h */,
 				5D70EB2E182014DF00482B00 /* CLSKickScene.m */,
+				5D1DE3091827E6E00086E6A1 /* Nodes */,
 			);
-			name = "Game Scenes";
+			name = "Kicking Scene";
 			sourceTree = "<group>";
 		};
 		5D07FEB81818783200CE924D /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				5D07FEB51818782E00CE924D /* CLSCan.h */,
-				5D07FEB61818782E00CE924D /* CLSCan.m */,
+				5D1DE311182800880086E6A1 /* city.atlas */,
 				5DB702EC1821BCB800964CC5 /* CLSKickCanSprite.h */,
 				5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */,
+				5D1DE313182814DD0086E6A1 /* CLSColaFoam.sks */,
+				5D1DE314182814DD0086E6A1 /* spark.png */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		5D1DE3061827E6B00086E6A1 /* Shaking Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5D07FEB218184E9200CE924D /* CLSShakerScene.h */,
+				5D07FEB318184E9200CE924D /* CLSShakerScene.m */,
+				5D1DE3081827E6CF0086E6A1 /* Nodes */,
+			);
+			name = "Shaking Scene";
+			sourceTree = "<group>";
+		};
+		5D1DE3071827E6C70086E6A1 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				5D07FEB51818782E00CE924D /* CLSCan.h */,
+				5D07FEB61818782E00CE924D /* CLSCan.m */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		5D1DE3081827E6CF0086E6A1 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE3071827E6C70086E6A1 /* Sprites */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		5D1DE3091827E6E00086E6A1 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE30A1827E9730086E6A1 /* CLSKickCameraNode.h */,
+				5D1DE30B1827E9730086E6A1 /* CLSKickCameraNode.m */,
+				5D07FEB81818783200CE924D /* Sprites */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		5D1DE317182862D50086E6A1 /* Menu Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE318182862F40086E6A1 /* CLSMenuScene.h */,
+				5D1DE319182862F40086E6A1 /* CLSMenuScene.m */,
+			);
+			name = "Menu Scene";
+			sourceTree = "<group>";
+		};
+		5D1DE31E182866AB0086E6A1 /* SmallBet.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE31F182866AB0086E6A1 /* Resources */,
+				5D1DE326182866AB0086E6A1 /* SmallBet.framework */,
+			);
+			path = SmallBet.embeddedframework;
+			sourceTree = "<group>";
+		};
+		5D1DE31F182866AB0086E6A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE320182866AB0086E6A1 /* ACKNOWLEDGEMENTS */,
+				5D1DE321182866AB0086E6A1 /* CHANGES */,
+				5D1DE322182866AB0086E6A1 /* README */,
+				5D1DE323182866AB0086E6A1 /* SmallBet.bundle */,
+				5D1DE324182866AB0086E6A1 /* SmallBet.xcconfig */,
+				5D1DE325182866AB0086E6A1 /* VERSION */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DA405CE182795E300F337C8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5D4EBB5C182790ED00204561 /* cola.atlas */,
+				5D07FE8F18184DF400CE924D /* Images.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		5DA405CF1827960300F337C8 /* Vector Math Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5DD72D8218268E330048D928 /* SKTUtils.h */,
+				5DD72D8318268E330048D928 /* SKTUtils.mm */,
+			);
+			name = "Vector Math Utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +390,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D1DE32B182866AB0086E6A1 /* SmallBet.xcconfig in Resources */,
+				5D1DE32C182866AB0086E6A1 /* VERSION in Resources */,
+				5D1DE329182866AB0086E6A1 /* README in Resources */,
+				5D1DE312182800880086E6A1 /* city.atlas in Resources */,
 				5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */,
+				5D1DE315182814DD0086E6A1 /* CLSColaFoam.sks in Resources */,
+				5D1DE328182866AB0086E6A1 /* CHANGES in Resources */,
+				5D1DE327182866AB0086E6A1 /* ACKNOWLEDGEMENTS in Resources */,
 				5D4EBB5D182790ED00204561 /* cola.atlas in Resources */,
 				5D07FE8818184DF400CE924D /* InfoPlist.strings in Resources */,
+				5D1DE32A182866AB0086E6A1 /* SmallBet.bundle in Resources */,
+				5D1DE316182814DD0086E6A1 /* spark.png in Resources */,
 				5D07FE9018184DF400CE924D /* Images.xcassets in Resources */,
-				5DB702F01821BD0F00964CC5 /* 20cola.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +427,11 @@
 				5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */,
 				5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */,
 				5D07FEB71818782E00CE924D /* CLSCan.m in Sources */,
+				5D1DE31A182862F40086E6A1 /* CLSMenuScene.m in Sources */,
 				5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */,
 				5D07FE8E18184DF400CE924D /* CLSAppDelegate.m in Sources */,
+				5D1DE30C1827E9730086E6A1 /* CLSKickCameraNode.m in Sources */,
+				5D1DE31D182863080086E6A1 /* CLSMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +475,7 @@
 /* Begin XCBuildConfiguration section */
 		5D07FEA418184DF400CE924D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1DE324182866AB0086E6A1 /* SmallBet.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -388,6 +515,7 @@
 		};
 		5D07FEA518184DF400CE924D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1DE324182866AB0086E6A1 /* SmallBet.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -424,6 +552,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/joel/Developer/Cola\\ Shaker/SmallBet.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cola Shaker/Cola Shaker-Prefix.pch";
 				INFOPLIST_FILE = "Cola Shaker/Cola Shaker-Info.plist";
@@ -438,6 +570,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/joel/Developer/Cola\\ Shaker/SmallBet.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cola Shaker/Cola Shaker-Prefix.pch";
 				INFOPLIST_FILE = "Cola Shaker/Cola Shaker-Info.plist";
