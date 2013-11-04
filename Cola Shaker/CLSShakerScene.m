@@ -16,13 +16,17 @@
 @property (nonatomic, strong) CLSCan * can;
 @property (nonatomic, strong) CMMotionManager * motionManager;
 
-@property (nonatomic, strong) SKLabelNode * damagePointsLabel;
 @property (nonatomic) double damagePoints;
+
+@property (nonatomic, getter = isGameStarted) BOOL gameStarted;
+@property (nonatomic, strong) SKLabelNode * timerLabel;
+@property (nonatomic) NSTimeInterval countdownStartTime;
 @end
 
 @implementation CLSShakerScene
 
 static uint32_t kCanContactBitmask = 1;
+#define kGAME_LENGTH 10.0
 
 -(instancetype)initWithSize:(CGSize)size{
 
@@ -40,9 +44,12 @@ static uint32_t kCanContactBitmask = 1;
         self.motionManager = [[CMMotionManager alloc] init];
         self.motionManager.accelerometerUpdateInterval = 1.0/60.0;
 
-        self.damagePointsLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-        self.damagePointsLabel.position = CGPointMake(CGRectGetMidX(self.frame), 0);
-        [self addChild:self.damagePointsLabel];
+        self.timerLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+        [self addChild:self.timerLabel];
+
+        CGFloat yPosition = CGRectGetMaxY(self.frame) - 60;
+        self.timerLabel.position = CGPointMake(CGRectGetMidX(self.frame), yPosition);
+        self.timerLabel.text = @"10.00";
     }
     return self;
 }
@@ -53,6 +60,16 @@ static uint32_t kCanContactBitmask = 1;
 -(void)update:(NSTimeInterval)currentTime{
     CMAcceleration acceleration = self.motionManager.accelerometerData.acceleration;
     self.physicsWorld.gravity = CGVectorMake(acceleration.x * 10.0 * 20.0, acceleration.y * 10.0* 20.0);
+
+    if (self.isGameStarted && self.countdownStartTime == 0) {
+        self.countdownStartTime = currentTime;
+    }
+
+    if (self.countdownStartTime > 0) {
+        NSTimeInterval timeElapsed = currentTime - self.countdownStartTime;
+        NSTimeInterval countdownTime = kGAME_LENGTH - timeElapsed;
+        self.timerLabel.text = [NSString stringWithFormat:@"%.2f",countdownTime];
+    }
 }
 
 -(void)didEvaluateActions{
@@ -71,6 +88,14 @@ static uint32_t kCanContactBitmask = 1;
     [self.motionManager stopAccelerometerUpdates];
 }
 
+#pragma mark - UIResponder
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (self.countdownStartTime == 0) {
+        [self startGame];
+    }
+}
+
 #pragma mark - CLShakerScene
 #pragma mark loading
 
@@ -83,14 +108,24 @@ static uint32_t kCanContactBitmask = 1;
 
 }
 
+#pragma mark playing
+
+-(void)startGame{
+    self.gameStarted = YES;
+}
+
 #pragma mark - SKPhysicsContactDelegate
 
 -(void)didBeginContact:(SKPhysicsContact *)contact{
     if (contact.collisionImpulse < 500000) {
         return;
     }
+
+    CGFloat priorDamage = self.damagePoints;
     self.damagePoints += contact.collisionImpulse / 100000;
-    self.damagePointsLabel.text = [NSString stringWithFormat:@"%0.2f",self.damagePoints];
+    if ((floor(self.damagePoints / 700.0) - floor(priorDamage / 700.0)) >= 1) {
+        [self.can dent];
+    }
 }
 
 @end
