@@ -16,7 +16,6 @@
 @property (nonatomic, strong) CLSCan * can;
 @property (nonatomic, strong) CMMotionManager * motionManager;
 
-
 @property (nonatomic, strong) SKLabelNode * damagePointsLabel;
 @property (nonatomic) double damagePoints;
 @end
@@ -40,8 +39,6 @@ static uint32_t kCanContactBitmask = 1;
 
         self.motionManager = [[CMMotionManager alloc] init];
         self.motionManager.accelerometerUpdateInterval = 1.0/60.0;
-        [self.motionManager startAccelerometerUpdates];
-
 
         self.damagePointsLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
         self.damagePointsLabel.position = CGPointMake(CGRectGetMidX(self.frame), 0);
@@ -64,6 +61,14 @@ static uint32_t kCanContactBitmask = 1;
 
 -(void)didSimulatePhysics{
 
+}
+
+-(void)didMoveToView:(SKView *)view{
+    [self.motionManager startAccelerometerUpdates];
+}
+
+-(void)willMoveFromView:(SKView *)view{
+    [self.motionManager stopAccelerometerUpdates];
 }
 
 #pragma mark - CLShakerScene
