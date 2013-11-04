@@ -58,13 +58,14 @@
 -(BOOL)dent{
 
     if (_dentIndex >= _sortedNames.count) {
-        return;
+        return NO;
     }
 
     NSString * textureName = _sortedNames[_dentIndex];
     SKTexture * texture = [_atlas textureNamed:textureName];
     self.texture = texture;
     _dentIndex ++;
+    return YES;
 }
 
 @end
