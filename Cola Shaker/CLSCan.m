@@ -16,7 +16,9 @@
 
 -(id)init{
     _atlas = [SKTextureAtlas atlasNamed:@"cola"];
-    _sortedNames = [_atlas.textureNames sortedArrayUsingSelector:@selector(description)];
+    _sortedNames = [_atlas.textureNames sortedArrayUsingComparator:^NSComparisonResult(NSString * obj1, NSString * obj2) {
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
     SKTexture * texture = [_atlas textureNamed:_sortedNames.firstObject];
     self = [super initWithTexture:texture];
     if (self) {
