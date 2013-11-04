@@ -10,4 +10,6 @@
 
 @interface CLSKickScene : SKScene
 
+@property (nonatomic) CGFloat canDamage;
+
 @end
