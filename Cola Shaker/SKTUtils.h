@@ -30,6 +30,14 @@ SKT_INLINE CGPoint UIKitPointToSKPoint(CGPoint point){
     return CGPointMake(point.x, -1*point.y);
 }
 
+SKT_INLINE CGVector CGPointToCGVector(CGPoint point){
+    return CGVectorMake(point.x, point.y);
+}
+
+SKT_INLINE CGPoint CGVectorToCGPoint(CGVector vector) {
+    return CGPointMake(vector.dx, vector.dy);
+}
+
 SKT_INLINE CGPoint CGPointAdd(CGPoint point1, CGPoint point2) {
     return CGPointMake(point1.x + point2.x, point1.y + point2.y);
 }
