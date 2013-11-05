@@ -20,6 +20,8 @@
 @property (nonatomic, strong) CLSKickCanSprite * can;
 @property (nonatomic, strong) SKEmitterNode * foamNode;
 
+@property (nonatomic, strong) SKLabelNode * distanceNode;
+
 @property (nonatomic) NSTimeInterval lastUpdateTime;
 
 @property (nonatomic, getter = hasKicked) BOOL kicked;
@@ -59,9 +61,15 @@
         self.can.position = position;
         [self.cameraNode addChild:self.can];
 
-        self.backgroundColor = [UIColor colorWithHue:0.52f saturation:0.99f brightness:1.00f alpha:1.00f];
+        self.distanceNode = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+        [self addChild:self.distanceNode];
 
-        self.canDamage = 7000;
+        CGFloat yPosition = CGRectGetMaxY(self.frame) - 40;
+        self.distanceNode.position = CGPointMake(CGRectGetMidX(self.frame), yPosition);
+        self.distanceNode.text = @"0.00m";
+
+
+        self.backgroundColor = [UIColor colorWithHue:0.52f saturation:0.99f brightness:1.00f alpha:1.00f];
     }
 
     return self;
@@ -72,10 +80,14 @@
 -(void)update:(NSTimeInterval)currentTime{
 
     if(self.hasKicked && self.can.physicsBody.resting){
-        self.kicked = NO;
-        self.burst = NO;
         [self.foamNode removeFromParent];
         self.foamNode = nil;
+        double delayInSeconds = 0.5;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"game over"
+                                                                object:@(-self.cameraNode.position.x)];
+        });
     }
 }
 
@@ -86,6 +98,7 @@
 -(void)didSimulatePhysics{
     if ([self hasKicked]) {
         [self moveCameraToCan];
+        [self updateDistance];
         [self sprayFoam];
     }
 }
@@ -117,7 +130,7 @@
 
 -(void)burstCan{
 
-    CGFloat burstMagnitude = self.canDamage / 10000 * 130;
+    CGFloat burstMagnitude = self.canDamage / 5000 * 150;
 
     CGVector force = CGPointToCGVector(CGPointMultiplyScalar(self.force, burstMagnitude));
     [self.can.physicsBody applyImpulse:force];
@@ -153,6 +166,13 @@
     self.foamNode.particleBirthRate = velocity;
 }
 
+
+-(void)updateDistance{
+    CGFloat distanceX = -self.cameraNode.position.x;
+    distanceX /= 50;
+    self.distanceNode.text = [NSString stringWithFormat:@"%.02fm",distanceX];
+}
+
 #pragma mark camera
 
 -(void)moveCameraToCan{
@@ -164,6 +184,9 @@
 #pragma mark - target action
 
 -(void)panGestureRecognized:(UIPanGestureRecognizer *)sender{
+    if (self.hasKicked) {
+        return;
+    }
     if (sender.state == UIGestureRecognizerStateEnded) {
         CGPoint velocity = [sender velocityInView:self.view];
         if (velocity.x > 0) {
