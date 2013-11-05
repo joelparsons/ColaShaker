@@ -34,6 +34,17 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(gameOver:)
+                                                 name:@"game over"
+                                               object:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 -(void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
@@ -47,6 +58,23 @@
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
+}
+
+-(void)gameOver:(NSNotification *)notification{
+    if (self.challenge) {
+        NSInteger score = [notification.object floatValue] * 100;
+        [self.challenge submitScore:score withCompletion:^(SBChallenge *updtedChallenge, NSError *error) {
+            [self dismissViewControllerAnimated:YES
+                                     completion:^{
+
+                                     }];
+        }];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES completion:^{
+
+        }];
+    }
 }
 
 @end
