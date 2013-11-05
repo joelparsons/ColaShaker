@@ -9,6 +9,7 @@
 #import "CLSMenuViewController.h"
 #import <SmallBet/SmallBet.h>
 #import "CLSMenuScene.h"
+#import "CLSGameViewController.h"
 
 @interface CLSMenuViewController ()
 <SBControllerDelegate, UIAlertViewDelegate>
@@ -20,6 +21,7 @@
 
 @property (nonatomic, strong) SBChallenge * observedChallenge;
 @property (nonatomic) BOOL userIntendedToViewChallenges;
+
 @property (nonatomic, strong) NSMutableArray * observers;
 
 @end
@@ -135,6 +137,12 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
+    if ([segue.identifier isEqualToString:@"playchallenge"]) {
+        id destination = segue.destinationViewController;
+        if ([destination isKindOfClass:[CLSGameViewController class]]) {
+            [destination setChallenge:sender];
+        }
+    }
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -243,6 +251,7 @@
                 case SBControllerResultTypeSuccess:{
                     //when selecting challenges if the result is success then the object
                     //is the SBChallenge the user has selected to play right now!!
+                    [self performSegueWithIdentifier:@"playchallenge" sender:object];
 
                 }
                     break;
