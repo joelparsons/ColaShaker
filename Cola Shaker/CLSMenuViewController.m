@@ -8,6 +8,7 @@
 
 #import "CLSMenuViewController.h"
 #import <SmallBet/SmallBet.h>
+#import "CLSMenuScene.h"
 
 @interface CLSMenuViewController ()
 <SBControllerDelegate, UIAlertViewDelegate>
@@ -121,6 +122,16 @@
 
 
 #pragma mark - UIViewController
+
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+
+    if (self.backgoundScene.scene == nil) {
+        CLSMenuScene * menuScene = [[CLSMenuScene alloc] initWithSize:self.view.bounds.size];
+        [self.backgoundScene setShowsFPS:YES];
+        [self.backgoundScene presentScene:menuScene];
+    }
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
