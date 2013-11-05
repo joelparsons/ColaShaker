@@ -7,8 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "CLSGameProgressionDelegate.h"
 
 @interface CLSKickScene : SKScene
+
+@property (nonatomic, weak) id<CLSGameProgressionDelegate> gameDelegate;
 
 @property (nonatomic) CGFloat canDamage;
 

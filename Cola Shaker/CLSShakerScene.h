@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@import SpriteKit;
+#import "CLSGameProgressionDelegate.h"
 
 @interface CLSShakerScene : SKScene
+@property (nonatomic, weak) id<CLSGameProgressionDelegate> gameDelegate;
 
 @end
