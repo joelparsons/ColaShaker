@@ -130,6 +130,7 @@
 		5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickCanSprite.m; sourceTree = "<group>"; };
 		5DD72D8218268E330048D928 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
 		5DD72D8318268E330048D928 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
+		5DDCD34018297B7600EAE915 /* CLSGameProgressionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSGameProgressionDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +402,7 @@
 			children = (
 				5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */,
 				5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */,
+				5DDCD34018297B7600EAE915 /* CLSGameProgressionDelegate.h */,
 				5D1DE3061827E6B00086E6A1 /* Shaking Scene */,
 				5D07FEB118184E7000CE924D /* Kicking Scene */,
 			);
