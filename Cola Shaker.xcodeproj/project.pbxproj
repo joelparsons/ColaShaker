@@ -45,6 +45,7 @@
 		5D1DE348182867F20086E6A1 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE33D182867F20086E6A1 /* AFURLConnectionOperation.m */; };
 		5D1DE349182867F20086E6A1 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE33F182867F20086E6A1 /* AFXMLRequestOperation.m */; };
 		5D1DE34A182867F20086E6A1 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE341182867F20086E6A1 /* UIImageView+AFNetworking.m */; };
+		5D1DE350182939EB0086E6A1 /* CLSSlidingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE34F182939EB0086E6A1 /* CLSSlidingNode.m */; };
 		5D4EBB5D182790ED00204561 /* cola.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EBB5C182790ED00204561 /* cola.atlas */; };
 		5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70EB2E182014DF00482B00 /* CLSKickScene.m */; };
 		5DB702EE1821BCB800964CC5 /* CLSKickCanSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */; };
@@ -120,6 +121,8 @@
 		5D1DE33F182867F20086E6A1 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		5D1DE340182867F20086E6A1 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		5D1DE341182867F20086E6A1 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		5D1DE34E182939EB0086E6A1 /* CLSSlidingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSSlidingNode.h; sourceTree = "<group>"; };
+		5D1DE34F182939EB0086E6A1 /* CLSSlidingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSSlidingNode.m; sourceTree = "<group>"; };
 		5D4EBB5C182790ED00204561 /* cola.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cola.atlas; sourceTree = "<group>"; };
 		5D70EB2D182014DF00482B00 /* CLSKickScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickScene.h; sourceTree = "<group>"; };
 		5D70EB2E182014DF00482B00 /* CLSKickScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickScene.m; sourceTree = "<group>"; };
@@ -298,6 +301,7 @@
 			children = (
 				5D1DE318182862F40086E6A1 /* CLSMenuScene.h */,
 				5D1DE319182862F40086E6A1 /* CLSMenuScene.m */,
+				5D1DE35118293A040086E6A1 /* Nodes */,
 			);
 			name = "Menu Scene";
 			sourceTree = "<group>";
@@ -358,6 +362,15 @@
 				5D1DE32E182867F20086E6A1 /* AFNetworking */,
 			);
 			name = Vendor;
+			sourceTree = "<group>";
+		};
+		5D1DE35118293A040086E6A1 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE34E182939EB0086E6A1 /* CLSSlidingNode.h */,
+				5D1DE34F182939EB0086E6A1 /* CLSSlidingNode.m */,
+			);
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 		5DA405CE182795E300F337C8 /* Images */ = {
@@ -502,6 +515,7 @@
 				5D1DE31A182862F40086E6A1 /* CLSMenuScene.m in Sources */,
 				5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */,
 				5D07FE8E18184DF400CE924D /* CLSAppDelegate.m in Sources */,
+				5D1DE350182939EB0086E6A1 /* CLSSlidingNode.m in Sources */,
 				5D1DE30C1827E9730086E6A1 /* CLSKickCameraNode.m in Sources */,
 				5D1DE31D182863080086E6A1 /* CLSMenuViewController.m in Sources */,
 				5D1DE342182867F20086E6A1 /* AFHTTPClient.m in Sources */,
