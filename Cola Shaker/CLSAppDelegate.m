@@ -7,10 +7,13 @@
 //
 
 #import "CLSAppDelegate.h"
+#import <SmallBet/SmallBet.h>
 
 @implementation CLSAppDelegate
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+
+    [[SBSmallbetManager defaultManager] setSandboxKey:@"T7Z0O5QLJDpMthr6n_AGmsvRhnbeO5nJHTcukKi2L-w" andProductionKey:nil];
 
     [self.window makeKeyAndVisible];
     return YES;
