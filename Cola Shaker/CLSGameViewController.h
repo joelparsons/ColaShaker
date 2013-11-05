@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SmallBet/SmallBet.h>
 
 @interface CLSGameViewController : UIViewController
+
+@property (nonatomic, strong) SBChallenge * challenge;
 
 @end
