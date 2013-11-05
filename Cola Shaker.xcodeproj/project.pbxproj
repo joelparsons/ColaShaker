@@ -194,13 +194,8 @@
 				5D07FE8C18184DF400CE924D /* CLSAppDelegate.h */,
 				5D07FE8D18184DF400CE924D /* CLSAppDelegate.m */,
 				5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */,
-				5D1DE31B182863080086E6A1 /* CLSMenuViewController.h */,
-				5D1DE31C182863080086E6A1 /* CLSMenuViewController.m */,
-				5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */,
-				5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */,
-				5D1DE317182862D50086E6A1 /* Menu Scene */,
-				5D1DE3061827E6B00086E6A1 /* Shaking Scene */,
-				5D07FEB118184E7000CE924D /* Kicking Scene */,
+				5DDCD33E182979AD00EAE915 /* Menu */,
+				5DDCD33F182979B700EAE915 /* Game */,
 				5D07FE8418184DF400CE924D /* Supporting Files */,
 			);
 			path = "Cola Shaker";
@@ -391,6 +386,27 @@
 			name = "Vector Math Utilities";
 			sourceTree = "<group>";
 		};
+		5DDCD33E182979AD00EAE915 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5D1DE31B182863080086E6A1 /* CLSMenuViewController.h */,
+				5D1DE31C182863080086E6A1 /* CLSMenuViewController.m */,
+				5D1DE317182862D50086E6A1 /* Menu Scene */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		5DDCD33F182979B700EAE915 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5D07FEAE18184E3A00CE924D /* CLSGameViewController.h */,
+				5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */,
+				5D1DE3061827E6B00086E6A1 /* Shaking Scene */,
+				5D07FEB118184E7000CE924D /* Kicking Scene */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,6 +455,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Joel Parsons";
 				TargetAttributes = {
+					5D07FE7918184DF400CE924D = {
+						DevelopmentTeam = ALU6Y3BNWP;
+					};
 					5D07FE9418184DF400CE924D = {
 						TestTargetID = 5D07FE7918184DF400CE924D;
 					};
@@ -595,8 +614,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -631,6 +651,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -639,6 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/joel/Developer/Cola\\ Shaker/SmallBet.embeddedframework",
@@ -657,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/joel/Developer/Cola\\ Shaker/SmallBet.embeddedframework",
