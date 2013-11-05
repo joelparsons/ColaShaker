@@ -9,6 +9,7 @@
 @import CoreMotion;
 #import "CLSShakerScene.h"
 #import "CLSCan.h"
+#import "CLSKickScene.h"
 
 @interface CLSShakerScene ()
 <SKPhysicsContactDelegate>
@@ -18,7 +19,10 @@
 
 @property (nonatomic) double damagePoints;
 
+@property (nonatomic) NSInteger gameCountInTimer;
+
 @property (nonatomic, getter = isGameStarted) BOOL gameStarted;
+@property (nonatomic, getter = isGameEnded) BOOL gameEnded;
 @property (nonatomic, strong) SKLabelNode * timerLabel;
 @property (nonatomic) NSTimeInterval countdownStartTime;
 @end
@@ -47,9 +51,11 @@ static uint32_t kCanContactBitmask = 1;
         self.timerLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
         [self addChild:self.timerLabel];
 
-        CGFloat yPosition = CGRectGetMaxY(self.frame) - 60;
+        CGFloat yPosition = CGRectGetMaxY(self.frame) - 40;
         self.timerLabel.position = CGPointMake(CGRectGetMidX(self.frame), yPosition);
         self.timerLabel.text = @"10.00";
+
+        [self showCountInTimer];
     }
     return self;
 }
@@ -65,10 +71,20 @@ static uint32_t kCanContactBitmask = 1;
         self.countdownStartTime = currentTime;
     }
 
-    if (self.countdownStartTime > 0) {
+    if (self.isGameStarted) {
         NSTimeInterval timeElapsed = currentTime - self.countdownStartTime;
         NSTimeInterval countdownTime = kGAME_LENGTH - timeElapsed;
-        self.timerLabel.text = [NSString stringWithFormat:@"%.2f",countdownTime];
+        if (countdownTime > 0) {
+            self.timerLabel.text = [NSString stringWithFormat:@"%.2f",countdownTime];
+        }
+        else if (self.isGameEnded == NO){
+            self.timerLabel.text = @"0.00";
+            self.gameEnded = YES;
+            SKTransition * transition = [SKTransition revealWithDirection:SKTransitionDirectionLeft duration:0.6];
+            CLSKickScene * kickScene = [[CLSKickScene alloc] initWithSize:self.size];
+            kickScene.canDamage = self.damagePoints;
+            [self.view presentScene:kickScene transition:transition];
+        }
     }
 }
 
@@ -88,14 +104,6 @@ static uint32_t kCanContactBitmask = 1;
     [self.motionManager stopAccelerometerUpdates];
 }
 
-#pragma mark - UIResponder
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    if (self.countdownStartTime == 0) {
-        [self startGame];
-    }
-}
-
 #pragma mark - CLShakerScene
 #pragma mark loading
 
@@ -106,6 +114,45 @@ static uint32_t kCanContactBitmask = 1;
     [self.can.physicsBody applyAngularImpulse:0.2 * M_PI];
     [self addChild:self.can];
 
+}
+
+-(void)showCountInTimer{
+    self.gameCountInTimer = 3;
+
+    SKLabelNode * labelNode = [[SKLabelNode alloc] initWithFontNamed:@"Avenir Next Condensed Heavy"];
+    labelNode.fontSize = 200;
+    labelNode.fontColor = [UIColor lightGrayColor];
+    labelNode.text = [NSString stringWithFormat:@"%ld",(long)self.gameCountInTimer];
+    labelNode.alpha = 1.0;
+    labelNode.position = CGPointMake(self.size.width / 2.0, self.size.height / 2.0);
+
+    [self addChild:labelNode];
+
+    SKAction * fadeIn = [SKAction fadeInWithDuration:0.3];
+    SKAction * wait = [SKAction waitForDuration:0.4];
+    SKAction * fadeOut = [SKAction fadeOutWithDuration:0.3];
+    SKAction * changeLabel = [SKAction runBlock:^{
+        self.gameCountInTimer --;
+        if (self.gameCountInTimer < 0) {
+            [self startGame];
+        }
+
+        if (self.gameCountInTimer == 0) {
+            labelNode.fontSize = 60;
+            labelNode.text = @"SHAKE!";
+        }
+        else{
+            labelNode.text = [NSString stringWithFormat:@"%ld",(long)self.gameCountInTimer];
+        }
+    }];
+
+    NSMutableArray * countInActions = [NSMutableArray array];
+
+    for (NSInteger i = self.gameCountInTimer; i >= 0; i--){
+        [countInActions addObjectsFromArray:@[fadeIn, wait, fadeOut, changeLabel]];
+    }
+    [countInActions addObject:[SKAction removeFromParent]];
+    [labelNode runAction:[SKAction sequence:countInActions]];
 }
 
 #pragma mark playing
@@ -121,10 +168,12 @@ static uint32_t kCanContactBitmask = 1;
         return;
     }
 
-    CGFloat priorDamage = self.damagePoints;
-    self.damagePoints += contact.collisionImpulse / 100000;
-    if ((floor(self.damagePoints / 700.0) - floor(priorDamage / 700.0)) >= 1) {
-        [self.can dent];
+    if (self.isGameStarted) {
+        CGFloat priorDamage = self.damagePoints;
+        self.damagePoints += contact.collisionImpulse / 100000;
+        if ((floor(self.damagePoints / 700.0) - floor(priorDamage / 700.0)) >= 1) {
+            [self.can dent];
+        }
     }
 }
 
