@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CLSGameProgressionDelegate.h"
+@class CLSCanSprite;
 
 @interface CLSShakerScene : SKScene
 @property (nonatomic, weak) id<CLSGameProgressionDelegate> gameDelegate;
+
+@property (nonatomic) double damagePoints;
+@property (nonatomic, strong) CLSCanSprite * can;
 
 @end

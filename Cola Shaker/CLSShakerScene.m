@@ -8,16 +8,13 @@
 
 @import CoreMotion;
 #import "CLSShakerScene.h"
-#import "CLSCan.h"
+#import "CLSCanSprite.h"
 #import "CLSKickScene.h"
 
 @interface CLSShakerScene ()
 <SKPhysicsContactDelegate>
 
-@property (nonatomic, strong) CLSCan * can;
 @property (nonatomic, strong) CMMotionManager * motionManager;
-
-@property (nonatomic) double damagePoints;
 
 @property (nonatomic) NSInteger gameCountInTimer;
 
@@ -80,10 +77,7 @@ static uint32_t kCanContactBitmask = 1;
         else if (self.isGameEnded == NO){
             self.timerLabel.text = @"0.00";
             self.gameEnded = YES;
-            SKTransition * transition = [SKTransition revealWithDirection:SKTransitionDirectionLeft duration:0.6];
-            CLSKickScene * kickScene = [[CLSKickScene alloc] initWithSize:self.size];
-            kickScene.canDamage = self.damagePoints;
-            [self.view presentScene:kickScene transition:transition];
+            [self.gameDelegate clsGameSceneDidFinish:self];
         }
     }
 }
@@ -108,7 +102,7 @@ static uint32_t kCanContactBitmask = 1;
 #pragma mark loading
 
 -(void)loadCan{
-    self.can = [CLSCan node];
+    self.can = [CLSCanSprite node];
     CGPoint position =CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     self.can.position = position;
     [self.can.physicsBody applyAngularImpulse:0.2 * M_PI];
