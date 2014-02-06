@@ -2,12 +2,12 @@
 //  CLSCan.h
 //  Cola Shaker
 //
-//  Created by Joel Parsons on 23/10/2013.
-//  Copyright (c) 2013 Joel Parsons. All rights reserved.
+//  Created by Joel Parsons on 06/02/2014.
+//  Copyright (c) 2014 Joel Parsons. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
+#import <Foundation/Foundation.h>
 
-@interface CLSCan : SKSpriteNode
--(BOOL)dent;
+@interface CLSCan : NSObject
+
 @end

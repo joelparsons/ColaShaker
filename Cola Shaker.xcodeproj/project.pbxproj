@@ -22,7 +22,7 @@
 		5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */; };
 		5D07FEB018184E3A00CE924D /* CLSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */; };
 		5D07FEB418184E9200CE924D /* CLSShakerScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB318184E9200CE924D /* CLSShakerScene.m */; };
-		5D07FEB71818782E00CE924D /* CLSCan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB61818782E00CE924D /* CLSCan.m */; };
+		5D07FEB71818782E00CE924D /* CLSCanSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D07FEB61818782E00CE924D /* CLSCanSprite.m */; };
 		5D1DE30C1827E9730086E6A1 /* CLSKickCameraNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE30B1827E9730086E6A1 /* CLSKickCameraNode.m */; };
 		5D1DE312182800880086E6A1 /* city.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE311182800880086E6A1 /* city.atlas */; };
 		5D1DE315182814DD0086E6A1 /* CLSColaFoam.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DE313182814DD0086E6A1 /* CLSColaFoam.sks */; };
@@ -48,6 +48,13 @@
 		5D1DE350182939EB0086E6A1 /* CLSSlidingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DE34F182939EB0086E6A1 /* CLSSlidingNode.m */; };
 		5D4EBB5D182790ED00204561 /* cola.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EBB5C182790ED00204561 /* cola.atlas */; };
 		5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70EB2E182014DF00482B00 /* CLSKickScene.m */; };
+		5D9A698C18A41054000AA525 /* CLSCan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A698B18A41054000AA525 /* CLSCan.m */; };
+		5D9A698F18A41068000AA525 /* CLSJukebox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A698E18A41068000AA525 /* CLSJukebox.m */; };
+		5D9A699618A41096000AA525 /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A699118A41096000AA525 /* 1.wav */; };
+		5D9A699718A41096000AA525 /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A699218A41096000AA525 /* 2.wav */; };
+		5D9A699818A41096000AA525 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A699318A41096000AA525 /* 3.wav */; };
+		5D9A699918A41096000AA525 /* 1_loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A699418A41096000AA525 /* 1_loop.wav */; };
+		5D9A699A18A41096000AA525 /* 2_loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A699518A41096000AA525 /* 2_loop.wav */; };
 		5DB702EE1821BCB800964CC5 /* CLSKickCanSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */; };
 		5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DD72D8318268E330048D928 /* SKTUtils.mm */; };
 /* End PBXBuildFile section */
@@ -84,8 +91,8 @@
 		5D07FEAF18184E3A00CE924D /* CLSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSGameViewController.m; sourceTree = "<group>"; };
 		5D07FEB218184E9200CE924D /* CLSShakerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSShakerScene.h; sourceTree = "<group>"; };
 		5D07FEB318184E9200CE924D /* CLSShakerScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSShakerScene.m; sourceTree = "<group>"; };
-		5D07FEB51818782E00CE924D /* CLSCan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSCan.h; sourceTree = "<group>"; };
-		5D07FEB61818782E00CE924D /* CLSCan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSCan.m; sourceTree = "<group>"; };
+		5D07FEB51818782E00CE924D /* CLSCanSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSCanSprite.h; sourceTree = "<group>"; };
+		5D07FEB61818782E00CE924D /* CLSCanSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSCanSprite.m; sourceTree = "<group>"; };
 		5D1DE30A1827E9730086E6A1 /* CLSKickCameraNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickCameraNode.h; sourceTree = "<group>"; };
 		5D1DE30B1827E9730086E6A1 /* CLSKickCameraNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickCameraNode.m; sourceTree = "<group>"; };
 		5D1DE311182800880086E6A1 /* city.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = city.atlas; sourceTree = "<group>"; };
@@ -126,6 +133,15 @@
 		5D4EBB5C182790ED00204561 /* cola.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cola.atlas; sourceTree = "<group>"; };
 		5D70EB2D182014DF00482B00 /* CLSKickScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickScene.h; sourceTree = "<group>"; };
 		5D70EB2E182014DF00482B00 /* CLSKickScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickScene.m; sourceTree = "<group>"; };
+		5D9A698A18A41054000AA525 /* CLSCan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSCan.h; sourceTree = "<group>"; };
+		5D9A698B18A41054000AA525 /* CLSCan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSCan.m; sourceTree = "<group>"; };
+		5D9A698D18A41068000AA525 /* CLSJukebox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSJukebox.h; sourceTree = "<group>"; };
+		5D9A698E18A41068000AA525 /* CLSJukebox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSJukebox.m; sourceTree = "<group>"; };
+		5D9A699118A41096000AA525 /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1.wav; sourceTree = "<group>"; };
+		5D9A699218A41096000AA525 /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
+		5D9A699318A41096000AA525 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
+		5D9A699418A41096000AA525 /* 1_loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1_loop.wav; sourceTree = "<group>"; };
+		5D9A699518A41096000AA525 /* 2_loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2_loop.wav; sourceTree = "<group>"; };
 		5DB702EC1821BCB800964CC5 /* CLSKickCanSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSKickCanSprite.h; sourceTree = "<group>"; };
 		5DB702ED1821BCB800964CC5 /* CLSKickCanSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSKickCanSprite.m; sourceTree = "<group>"; };
 		5DD72D8218268E330048D928 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
@@ -195,6 +211,7 @@
 				5D07FE8C18184DF400CE924D /* CLSAppDelegate.h */,
 				5D07FE8D18184DF400CE924D /* CLSAppDelegate.m */,
 				5D07FEAC18184E0D00CE924D /* MainStoryboard.storyboard */,
+				5D9A698918A4102E000AA525 /* Model */,
 				5DDCD33E182979AD00EAE915 /* Menu */,
 				5DDCD33F182979B700EAE915 /* Game */,
 				5D07FE8418184DF400CE924D /* Supporting Files */,
@@ -205,6 +222,7 @@
 		5D07FE8418184DF400CE924D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D9A699018A4108D000AA525 /* Music */,
 				5DA405CE182795E300F337C8 /* Images */,
 				5DA405CF1827960300F337C8 /* Vector Math Utilities */,
 				5D07FE8518184DF400CE924D /* Cola Shaker-Info.plist */,
@@ -268,8 +286,8 @@
 		5D1DE3071827E6C70086E6A1 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				5D07FEB51818782E00CE924D /* CLSCan.h */,
-				5D07FEB61818782E00CE924D /* CLSCan.m */,
+				5D07FEB51818782E00CE924D /* CLSCanSprite.h */,
+				5D07FEB61818782E00CE924D /* CLSCanSprite.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -369,6 +387,29 @@
 			name = Nodes;
 			sourceTree = "<group>";
 		};
+		5D9A698918A4102E000AA525 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A698A18A41054000AA525 /* CLSCan.h */,
+				5D9A698B18A41054000AA525 /* CLSCan.m */,
+				5D9A698D18A41068000AA525 /* CLSJukebox.h */,
+				5D9A698E18A41068000AA525 /* CLSJukebox.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5D9A699018A4108D000AA525 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A699118A41096000AA525 /* 1.wav */,
+				5D9A699218A41096000AA525 /* 2.wav */,
+				5D9A699318A41096000AA525 /* 3.wav */,
+				5D9A699418A41096000AA525 /* 1_loop.wav */,
+				5D9A699518A41096000AA525 /* 2_loop.wav */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		5DA405CE182795E300F337C8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,7 +499,7 @@
 				ORGANIZATIONNAME = "Joel Parsons";
 				TargetAttributes = {
 					5D07FE7918184DF400CE924D = {
-						DevelopmentTeam = ALU6Y3BNWP;
+						DevelopmentTeam = X8F2VPDE87;
 					};
 					5D07FE9418184DF400CE924D = {
 						TestTargetID = 5D07FE7918184DF400CE924D;
@@ -491,16 +532,21 @@
 				5D1DE32B182866AB0086E6A1 /* SmallBet.xcconfig in Resources */,
 				5D1DE32C182866AB0086E6A1 /* VERSION in Resources */,
 				5D1DE329182866AB0086E6A1 /* README in Resources */,
+				5D9A699718A41096000AA525 /* 2.wav in Resources */,
+				5D9A699818A41096000AA525 /* 3.wav in Resources */,
 				5D1DE312182800880086E6A1 /* city.atlas in Resources */,
 				5D07FEAD18184E0D00CE924D /* MainStoryboard.storyboard in Resources */,
+				5D9A699A18A41096000AA525 /* 2_loop.wav in Resources */,
 				5D1DE315182814DD0086E6A1 /* CLSColaFoam.sks in Resources */,
 				5D1DE328182866AB0086E6A1 /* CHANGES in Resources */,
 				5D1DE327182866AB0086E6A1 /* ACKNOWLEDGEMENTS in Resources */,
+				5D9A699618A41096000AA525 /* 1.wav in Resources */,
 				5D4EBB5D182790ED00204561 /* cola.atlas in Resources */,
 				5D07FE8818184DF400CE924D /* InfoPlist.strings in Resources */,
 				5D1DE32A182866AB0086E6A1 /* SmallBet.bundle in Resources */,
 				5D1DE316182814DD0086E6A1 /* spark.png in Resources */,
 				5D07FE9018184DF400CE924D /* Images.xcassets in Resources */,
+				5D9A699918A41096000AA525 /* 1_loop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +577,8 @@
 				5D70EB2F182014DF00482B00 /* CLSKickScene.m in Sources */,
 				5D1DE349182867F20086E6A1 /* AFXMLRequestOperation.m in Sources */,
 				5D1DE34A182867F20086E6A1 /* UIImageView+AFNetworking.m in Sources */,
-				5D07FEB71818782E00CE924D /* CLSCan.m in Sources */,
+				5D9A698F18A41068000AA525 /* CLSJukebox.m in Sources */,
+				5D07FEB71818782E00CE924D /* CLSCanSprite.m in Sources */,
 				5D1DE345182867F20086E6A1 /* AFJSONRequestOperation.m in Sources */,
 				5D1DE31A182862F40086E6A1 /* CLSMenuScene.m in Sources */,
 				5DD72D8418268E330048D928 /* SKTUtils.mm in Sources */,
@@ -540,6 +587,7 @@
 				5D1DE30C1827E9730086E6A1 /* CLSKickCameraNode.m in Sources */,
 				5D1DE31D182863080086E6A1 /* CLSMenuViewController.m in Sources */,
 				5D1DE342182867F20086E6A1 /* AFHTTPClient.m in Sources */,
+				5D9A698C18A41054000AA525 /* CLSCan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/joel/Developer/Cola\\ Shaker/SmallBet.embeddedframework",
@@ -671,6 +720,7 @@
 				GCC_PREFIX_HEADER = "Cola Shaker/Cola Shaker-Prefix.pch";
 				INFOPLIST_FILE = "Cola Shaker/Cola Shaker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -682,6 +732,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/joel/Developer/Cola\\ Shaker/SmallBet.embeddedframework",
@@ -690,6 +741,7 @@
 				GCC_PREFIX_HEADER = "Cola Shaker/Cola Shaker-Prefix.pch";
 				INFOPLIST_FILE = "Cola Shaker/Cola Shaker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
