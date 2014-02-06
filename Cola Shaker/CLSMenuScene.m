@@ -40,7 +40,7 @@ static NSString * const kMiddleScroller = @"middle scroll node";
     [node tileWithNodeHeight:thirdSceneHeight];
 
 
-    SKAction * move = [SKAction moveByX:-100 y:0 duration:2.0];
+    SKAction * move = [SKAction moveByX:-50 y:0 duration:1.0];
     SKAction * tile = [SKAction performSelector:@selector(tile) onTarget:node];
     SKAction * queue = [SKAction sequence:@[move, tile]];
     [node runAction:[SKAction repeatActionForever:queue]];
