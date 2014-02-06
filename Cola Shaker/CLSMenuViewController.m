@@ -105,6 +105,7 @@
                   usingBlock:^(NSNotification *note) {
                       [self startShakingLabel];
                   }];
+    [self.observers addObject:observer];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -264,6 +265,7 @@
     }];
 }
 
+#pragma mark - <#section title#>
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
     if (buttonIndex == alertView.firstOtherButtonIndex) {
