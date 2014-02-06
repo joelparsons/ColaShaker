@@ -7,7 +7,7 @@
 //
 
 #import "CLSKickScene.h"
-#import "CLSCan.h"
+#import "CLSCanSprite.h"
 #import "CLSKickCanSprite.h"
 #import "CLSKickCameraNode.h"
 
@@ -26,11 +26,18 @@
 
 @property (nonatomic, getter = hasKicked) BOOL kicked;
 @property (nonatomic, getter = hasBurst) BOOL burst;
+@property (nonatomic, getter = hasEnded) BOOL ended;
 
 @property (nonatomic) CGPoint force;
 @end
 
 @implementation CLSKickScene
+
+#pragma mark - properties
+
+-(CGFloat)score{
+    return -self.cameraNode.position.x;
+}
 
 #define kCAN_X_OFFSET CGRectGetMidX(self.frame)
 #define kFLOOR_NODE_CATEGORY 1
@@ -80,14 +87,7 @@
 -(void)update:(NSTimeInterval)currentTime{
 
     if(self.hasKicked && self.can.physicsBody.resting){
-        [self.foamNode removeFromParent];
-        self.foamNode = nil;
-        double delayInSeconds = 0.5;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"game over"
-                                                                object:@(-self.cameraNode.position.x)];
-        });
+        [self endGame];
     }
 }
 
@@ -179,6 +179,25 @@
     CGPoint convertedCanPosition = self.can.position;
     CGFloat convertedCanX = convertedCanPosition.x - kCAN_X_OFFSET;
     self.cameraNode.position = CGPointMake(-convertedCanX, 0);
+}
+
+#pragma mark end
+
+-(void)endGame{
+    if (self.hasEnded == NO) {
+        self.ended = YES;
+        [self.foamNode removeFromParent];
+        self.foamNode = nil;
+
+        CGPoint centerPoint = CGPointMake(self.size.width / 2.0, self.size.height / 2.0);
+        SKAction * move = [SKAction moveTo:centerPoint duration:0.5];
+        move.timingMode = SKActionTimingEaseInEaseOut;
+        SKAction * scale = [SKAction scaleTo:1.7 duration:0.5];
+
+        [self.distanceNode runAction:[SKAction group:@[move, scale]]];
+
+        [self.gameDelegate clsGameSceneDidFinish:self];
+    }
 }
 
 #pragma mark - target action

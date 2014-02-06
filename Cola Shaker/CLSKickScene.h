@@ -15,4 +15,6 @@
 
 @property (nonatomic) CGFloat canDamage;
 
+@property (nonatomic, readonly) CGFloat score;
+
 @end
