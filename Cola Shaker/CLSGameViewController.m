@@ -10,9 +10,10 @@
 #import "CLSGameViewController.h"
 #import "CLSShakerScene.h"
 #import "CLSKickScene.h"
+#import "CLSGameProgressionDelegate.h"
 
 @interface CLSGameViewController ()
-
+<CLSGameProgressionDelegate>
 @property (weak, nonatomic) IBOutlet SKView *sceneView;
 @end
 
@@ -35,14 +36,11 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(gameOver:)
-                                                 name:@"game over"
-                                               object:nil];
+    [super viewWillAppear:animated];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super viewDidDisappear:animated];
 }
 
 -(void)viewWillLayoutSubviews
@@ -52,6 +50,7 @@
     if (self.sceneView.scene == nil) {
         //CLSKickScene * scene = [CLSKickScene sceneWithSize:self.sceneView.bounds.size];
         CLSShakerScene * scene = [CLSShakerScene sceneWithSize:self.sceneView.bounds.size];
+        scene.gameDelegate = self;
         [self.sceneView presentScene:scene];
     }
 }
@@ -60,10 +59,10 @@
     return YES;
 }
 
--(void)gameOver:(NSNotification *)notification{
+-(void)gameOverWithScore:(float)score{
     if (self.challenge) {
-        NSInteger score = [notification.object floatValue] * 100;
-        [self.challenge submitScore:score withCompletion:^(SBChallenge *updtedChallenge, NSError *error) {
+        NSInteger finalScore = (NSInteger)(score * 100);
+        [self.challenge submitScore:finalScore withCompletion:^(SBChallenge *updtedChallenge, NSError *error) {
             [self dismissViewControllerAnimated:YES
                                      completion:^{
 
@@ -71,9 +70,29 @@
         }];
     }
     else{
-        [self dismissViewControllerAnimated:YES completion:^{
+        double delayInSeconds = 2.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self dismissViewControllerAnimated:YES completion:^{
 
-        }];
+            }];
+        });
+    }
+}
+
+#pragma mark - CLSGameProgressionDelegate
+
+-(void)clsGameSceneDidFinish:(SKScene *)scene{
+    if ([scene isKindOfClass:[CLSShakerScene class]]) {
+        CLSShakerScene * shakerScene = (CLSShakerScene *)scene;
+        SKTransition * transition = [SKTransition revealWithDirection:SKTransitionDirectionLeft duration:0.6];
+        CLSKickScene * kickScene = [[CLSKickScene alloc] initWithSize:scene.size];
+        kickScene.gameDelegate = self;
+        kickScene.canDamage = shakerScene.damagePoints;
+        [self.sceneView presentScene:kickScene transition:transition];
+    }else if ([scene isKindOfClass:[CLSKickScene class]]){
+        CLSKickScene * kickScene = (CLSKickScene *)scene;
+        [self gameOverWithScore:kickScene.score];
     }
 }
 
